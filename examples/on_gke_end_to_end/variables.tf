@@ -137,7 +137,7 @@ variable "k8s_forseti_server_image_tag" {
 variable "kubernetes_version" {
   type        = string
   description = "The Kubernetes version of the masters. If set to 'latest' it will pull latest available version in the selected region."
-  default     = "1.15.8-gke.2"
+  default     = "1.14.9-gke.23"
 }
 
 variable "network" {
@@ -194,6 +194,11 @@ variable "auto_create_subnetworks" {
 variable "server_log_level" {
   description = "The log level of the Forseti server container."
   default     = "info"
+}
+
+variable "helm_chart_version" {
+  description = "The helm chart version"
+  default     = "2.1.0"
 }
 
 #----------------#
