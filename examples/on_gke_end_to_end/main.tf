@@ -19,12 +19,12 @@
 #------------------#
 
 provider "google" {
-  version = "~> 2.12.0"
+  version = "~> 2.18.0"
   project = var.project_id
 }
 
 provider "google-beta" {
-  version = "~> 2.12.0"
+  version = "~> 2.18.0"
   project = var.project_id
 }
 
@@ -100,7 +100,7 @@ module "vpc" {
 
 module "gke" {
   source                   = "terraform-google-modules/kubernetes-engine/google//modules/beta-public-cluster"
-  version                  = "5.0.0"
+  version                  = "6.2.0"
   project_id               = var.project_id
   name                     = var.gke_cluster_name
   region                   = var.region
